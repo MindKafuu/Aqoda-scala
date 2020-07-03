@@ -46,6 +46,9 @@ class HotelManager(hotel: Hotel) {
     bookingRecord
   }
 
+  def checkRoomExistsInHotel(roomNo: RoomNo): Boolean =
+    hotel.roomsNo.contains(roomNo)
+
   def checkBookingExistsBy(roomNo: RoomNo): Boolean =
     bookingRecords.exists(_.roomNo == roomNo)
 
